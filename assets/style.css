@@ -1,0 +1,43 @@
+body {
+    margin:0;
+    padding:0;
+    height:100vh;
+    width:95%;
+    margin:0 auto;
+    display:grid;
+    grid-template-areas: 
+    "head head head head nav nav nav nav nav nav nav nav"
+    "meat meat meat meat meat meat meat meat side side side side"
+    "foot foot foot foot foot foot foot foot foot foot foot foot"
+    ;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+header {
+    grid-area: head;
+    background:red;
+}
+
+nav {
+    grid-area: nav;
+    background: green;
+}
+
+main {
+    grid-area: meat;
+    display:block;
+    background:blue;
+}
+
+aside {
+ grid-area: side;
+ background: purple;   
+}
+
+footer {
+    grid-area: foot;
+    background:yellowgreen;
+}
