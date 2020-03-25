@@ -3,13 +3,13 @@ body {
     padding:0px;
     width:100%;
     display:grid;
+    max-width:900px;
     grid-template-areas: 
     "head head head head head head head head head head head head head head"
     "rule rule rule rule rule rule rule rule rule rule rule rule rule rule"
-    "...  meat meat meat meat side side side side side side2 side2 side2 ..."
+    "meat meat meat meat meat side side side side side side side2 side2 side2"
     "foot foot foot foot foot foot foot foot foot foot foot foot foot foot"
     ;
-    grid-template-rows: 130px 3px 3fr 100px;
     grid-template-columns: repeat(14, 1fr);
     grid-row-gap:10px;
     grid-column-gap:10px;
@@ -17,7 +17,7 @@ body {
 
 h1, h2, h3, p{
     font-family: Arial, Helvetica, sans-serif;
-    color:rgb(0,55,104);
+    color:#003768;
 }
 
 h1 {
@@ -47,7 +47,7 @@ p {
 header {
     grid-area: head;
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     flex-direction: row;
 }
@@ -57,7 +57,6 @@ header {
     font-weight: 100;
     line-height: 18px;
     margin:0 auto;
-    display:flex;
     align-items: center;
     flex-direction: column;
 }
@@ -74,7 +73,12 @@ header {
 }
 
 nav ul {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     font-family: Arial, Helvetica, sans-serif;
+
+    margin:0;
     margin-block-start:0;
     margin-block-end: 0;
     margin-inline-start: 0;
@@ -86,19 +90,16 @@ nav {
     margin:0 auto;
 }
 
-nav li {
-    display:inline;
-}
 
-nav ul li:first-of-type {
-    margin:0;
+nav li {
+    display:inline-block;
 }
 
 nav li {
     text-decoration:none;
-    margin:0 0 0 10px;
+    margin:10px 0 0 10px;
     color:white;
-    padding:20px;
+    padding:10px;
     background:rgb(7,60,108);
     transition: background-color .3s ease-in-out;
 }
@@ -116,9 +117,13 @@ nav li:hover{
 
 .rule {
     grid-area:rule;
+    height:2px;
     background:rgb(7,60,108);
 }
 
+.information p{
+    font-size:14px;
+}
 
 main {
     grid-area: meat;
@@ -150,7 +155,7 @@ main section.bannerImg h1 {
     color:white;
     font-family: Arial, Helvetica, sans-serif;
     padding:20px;
-    font-size:25px;
+    font-size:15px;
     text-align:center;
     width:50%;
     margin:10px;
@@ -168,7 +173,7 @@ aside.asideCenter {
 .module {
     background:rgb(228, 228, 228);
     padding:10px 10px;
-    margin:10px 0 10px 0;
+    margin:0px 0 10px 0;
 }
 
 
@@ -176,7 +181,7 @@ aside.asideCenter {
 /* FORMS */
 #formWrapper{
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     flex-direction: row;
     text-align:left;
@@ -190,7 +195,7 @@ aside.asideCenter {
 
 .doubleFlex{
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .asideCenter form #formcolumns section{
@@ -266,11 +271,11 @@ footer {
     grid-area: foot;
     background:rgb(7,60,108);
     padding:20px;
-    display:flex;
-    justify-content: space-evenly;
-    flex-direction: roe;
 }
 
 footer h1, footer h2, footer h3, footer p{
     color:white;
+}
+
+#photoCredit {
 }
