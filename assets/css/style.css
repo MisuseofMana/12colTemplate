@@ -7,7 +7,7 @@ body {
     grid-template-areas: 
     "head head head head head head head head head head head head head head"
     "rule rule rule rule rule rule rule rule rule rule rule rule rule rule"
-    "meat meat meat meat meat side side side side side side side2 side2 side2"
+    "meat meat meat meat meat side side side side side side side side side"
     "foot foot foot foot foot foot foot foot foot foot foot foot foot foot"
     ;
     grid-template-columns: repeat(14, 1fr);
